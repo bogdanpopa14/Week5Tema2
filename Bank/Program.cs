@@ -22,11 +22,11 @@ namespace Bank
             
             Console.WriteLine();
 
-            Deposit d1 = new Deposit(c1, 3000, 12);
+            Account d1 = new Deposit(c1, 3000, 12);
             d1.CalculateInterest();
             d1.AccountSituation();
             
-
+            
             //Account l2 = new Loan(c2, 5000, 6);
             //l2.DepositMoney(100);
             //l2.CalculateInterest();

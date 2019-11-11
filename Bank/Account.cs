@@ -24,7 +24,7 @@ namespace Bank
         public abstract void CalculateInterest();
         
         public abstract void AccountSituation();
-        
-            
+
+       
     }
 }

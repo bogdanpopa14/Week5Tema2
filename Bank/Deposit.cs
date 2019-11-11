@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bank
 {
-    public class Deposit:Account
+    public class Deposit:Account, IWithdraw
     {
         private int Nr_mounths;
         private double dobanda;
@@ -52,5 +52,9 @@ namespace Bank
             Console.WriteLine($"Mai aveti in cont: {balance} la depozitul creat pe {Nr_mounths} luni");
         }
 
+        public void St()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
