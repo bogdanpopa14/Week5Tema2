@@ -13,9 +13,12 @@ namespace Car
             var FordSt = new FordStore();
             var client = new Customer("Bogdan");
             var order=FordSt.ClientBuyCar(client, "Fiesta");
+            var SkodaSt = new SkodaStore();
+            var order2 = SkodaSt.ClientBuyCar(client, "Octavia");
             FordSt.OrderSituation();
             FordSt.CancelOrder(client, order);
             FordSt.OrderSituation();
+            SkodaSt.OrderSituation();
             Console.ReadLine();
         }
     }
