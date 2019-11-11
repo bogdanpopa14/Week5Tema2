@@ -12,6 +12,8 @@ namespace Bank
         {
             ICustomer c1 = new Companies("Companie");
             ICustomer c2 = new Individual("Bgd", 23);
+            
+            
 
             //Account l1 = new Loan(c1, 2000, 2);
             //l1.DepositMoney(200);

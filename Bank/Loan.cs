@@ -16,7 +16,7 @@ namespace Bank
         {
             this.loan_money = loanmoney;
             this.Nr_mounths = nrmounths;
-            this.dobanda = 0;
+            
         }
        
         public override void CalculateInterest()
@@ -31,7 +31,7 @@ namespace Bank
                 {
                     dobanda = (interestRate / 100) * loan_money * (Nr_mounths - 2);
                 }
-                Console.WriteLine($"La imprumutul de: {loan_money}$ pe {Nr_mounths} luni aveti de platit o rata de: {dobanda}");
+                Console.WriteLine($"La imprumutul de: {loan_money}$ pe {Nr_mounths} luni aveti de platit la dobanda {interestRate}% o rata de: {dobanda}");
             }
             if(client is Individual)
             {
@@ -44,12 +44,12 @@ namespace Bank
                 {
                     dobanda = (interestRate / 100) * loan_money * (Nr_mounths - 3);
                 }
-                Console.WriteLine($"La imprumutul de: {loan_money}$ pe {Nr_mounths} luni aveti de platit o rata de: {dobanda}");
+                Console.WriteLine($"La imprumutul de: {loan_money}$ pe {Nr_mounths} luni aveti de platit la dobanda {interestRate}% o rata de: {dobanda}$");
             }
         }
         public override void AccountSituation()
         {
-            Console.WriteLine($"La imprumutul de {loan_money}$ pe {Nr_mounths} luni cu o dobanda de {dobanda}$ ati achitat {balance}$");
+            Console.WriteLine($"La imprumutul de {loan_money}$ pe {Nr_mounths} luni cu o rata de {dobanda}$ la dobanda {interestRate}% ati achitat {balance}$");
         }
     }
 }
